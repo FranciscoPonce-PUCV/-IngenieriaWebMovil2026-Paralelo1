@@ -1,5 +1,7 @@
 # Taller 4: Ionic + React + APIs
 
+**Nota**: Durante todos nuestros talleres, utilizaremos el editor de código Visual Studio Code, para dudas respecto a la interfaz del editor puedes consultar la documentación oficial en: https://code.visualstudio.com/docs/editing/getting-started
+
 ## Objetivo
 
 Aprender a obtener información desde una API (JSONPlaceholder) y mostrarla dinámicamente en una aplicación creada con **Ionic y React**.
