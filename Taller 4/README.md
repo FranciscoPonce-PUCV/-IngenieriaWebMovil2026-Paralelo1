@@ -1,8 +1,16 @@
 # Taller 4: Ionic + React + APIs
 
-**Nota**: Durante todos nuestros talleres, utilizaremos el editor de código Visual Studio Code, para dudas respecto a la interfaz del editor puedes consultar la documentación oficial en: https://code.visualstudio.com/docs/editing/getting-started
+**Nota**: Durante todos nuestros talleres utilizaremos el editor de código Visual Studio Code. Para dudas respecto a la interfaz del editor puedes consultar la documentación oficial en: https://code.visualstudio.com/docs/editing/getting-started
 
-## Objetivo
+## Algunos comandos útiles para VSCode
+```text
+Nota: Los siguientes comandos fueron probados en Windows:
+Alt + Shift + F - comando para indentar el código.
+Control + J - comando para abrir o cerrar la terminal.
+Control + S - comando para guardar el archivo actual.
+```
+
+## Objetivo del Taller 4
 
 Aprender a obtener información desde una API (JSONPlaceholder) y mostrarla dinámicamente en una aplicación creada con **Ionic y React**.
 
