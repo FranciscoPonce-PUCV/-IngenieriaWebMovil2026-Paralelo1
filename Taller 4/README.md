@@ -4,7 +4,8 @@
 
 ## Algunos comandos útiles para VSCode
 ```text
-Nota: Los siguientes comandos fueron probados en Windows:
+Nota: Los siguientes comandos fueron probados en Windows.
+
 Alt + Shift + F - comando para indentar el código.
 Control + J - comando para abrir o cerrar la terminal.
 Control + S - comando para guardar el archivo actual.
@@ -38,12 +39,20 @@ Con React, normalmente se trabaja de otra forma:
 
 ## 1. Primer paso: Crear el proyecto 
 
-Instala Ionic CLI utilizando los siguientes comandos (asegúrate de tener node instalado previamente):
+Instala Ionic CLI utilizando los siguientes comandos (asegúrate de tener Node y su versión correspondiente instalados previamente):
 
 ```bash
+Nota: Puedes leer más acerca de los comandos de npm en el siguiente enlace: https://docs.npmjs.com/cli/v12/using-npm/config
+
 npm config set ignore-scripts true
+Explicación: Este comando le indica a npm que bloquee la ejecución automática de cualquier script; Se recomienda utilizarlo por motivos de seguridad.
+
 npm view @ionic/cli
+Explicación: Este comando se utiliza para consultar y mostrar en la terminal información detallada sobre el paquete npm que se desea instalar (@ionic/cli en nuestro caso).
+
 npm install -g @ionic/cli
+Explicación: Este comando se utiliza para instalar la interfaz de línea de comandos oficial de Ionic.
+
 ```
 
 Una vez instalado, creamos un proyecto utilizando Ionic:
@@ -52,30 +61,33 @@ Una vez instalado, creamos un proyecto utilizando Ionic:
 ionic start taller4 blank --type=react
 ```
 
-El comando anterior, crea un proyecto de tipo react con nombre taller4, ahora ingresa a la carpeta del proyecto:
+El comando anterior crea un proyecto de tipo React con nombre taller4, ahora ingresa a la carpeta del proyecto que creaste utilizando:
 
 ```bash
 cd taller4
+Nota: Asegúrate de utilizar el nombre del proyecto que asignaste (taller4 en nuestro ejemplo).
 ```
 
 Despliega la aplicación utilizando el siguiente comando:
 
 ```bash
 ionic serve
+Explicación: Este comando se utiliza para iniciar un servidor de desarrollo local y abrir nuestra aplicación de Ionic en el navegador web.
+Nota: Puedes leer más acerca de este comando en el siguiente enlace: https://ionicframework.com/docs/cli/commands/serve
 ```
 
 ## 2. Archivos del taller
 
-El proyecto tiene muchos directorios y archivos, pero durante el taller, trabajaremos principalmente en los siguientes archivos:
+El proyecto tiene muchos directorios y archivos, pero durante el taller, trabajaremos principalmente en el siguiente directorio:
 
 ```text
 src/
 ├── pages/
-│   ├── PostsPage.tsx
+│   ├── 
 └── App.tsx
 ```
 
-Descarga el archivo `PostsPage.tsx` que contiene comentarios que te servirán de apoyo para completar el taller.
+Descarga el archivo `PostsPage.tsx` que encontrarás en los archivos del taller 4 y cópialo dentro del directorio anterior (src/pages). Este archivo contiene comentarios que te servirán de apoyo para completar el taller.
 
 
 ## 3. Componentes de Ionic
@@ -111,7 +123,7 @@ Ejemplo de estructura de una página:
 
 ## 4. Utilizar `useState` de React
 
-A partir de este punto, trabajaremos en nuestro archivo `PostsPage.tsx`. Primero definiremos la estructura de una publicación, inspirandonos en la estructura que nos indica la API:
+A partir de este punto, trabajaremos en nuestro archivo `PostsPage.tsx`. Primero definiremos la estructura de una publicación, inspirándonos en la estructura que nos indica la API:
 
 ```tsx
 interface Post {
@@ -127,7 +139,7 @@ Después importamos `useState` desde React:
 ```tsx
 import { useState } from "react";
 ```
-`useState` es un "Hook" de React que le permite a los componentes tener memoria propia (estado).
+`useState` es un "Hook" de React que les permite a los componentes tener memoria propia (estado).
 
 ***Nota:*** Puedes leer más al respecto en la documentación oficial de React (https://react.dev/reference/react/useState).
 
@@ -137,7 +149,7 @@ Y creamos el estado para nuestros Posts:
 const [posts, setPosts] = useState<Post[]>([]);
 ```
 
-El fragmento de código anterior, puede interpretarse de la siguiente forma:
+El fragmento de código anterior puede interpretarse de la siguiente forma:
 
 ```text
 posts     → publicaciones actuales
@@ -147,7 +159,7 @@ setPosts  → función para actualizar las publicaciones
 
 ## 5. Crear la función para consultar la API
 
-Nuestro archivo `PostsPage.tsx` descargado, contiene la siguiente función:
+Nuestro archivo `PostsPage.tsx` descargado contiene la siguiente función:
 
 ```tsx
 const cargarPosts = () => {
@@ -165,12 +177,12 @@ fetch("https://jsonplaceholder.typicode.com/posts")
   });
 ```
 
-Para verificar que todo esta funcionando, prueba primero el código y revisa la consola del navegador.
+Para verificar que todo está funcionando, prueba primero el código y revisa la consola del navegador.
 
 
 ## 6. Guardar los datos en el estado
 
-Ahora que verificamos que todo esta funcionando y que recibimos correctamente los datos desde la API podemos reemplazar:
+Ahora que verificamos que todo está funcionando y que recibimos correctamente los datos desde la API podemos reemplazar:
 
 ```tsx
 console.log(datos);
@@ -216,7 +228,7 @@ boton.addEventListener("click", function() {
 
 En el Taller 3 utilizamos `forEach()` para recorrer el arreglo y generar los Posts de forma dinámica.
 
-Con React podemos transformar cada elemento del arreglo en una representación visual mediante el método `map()`. A continuacón un ejemplo:
+Con React podemos transformar cada elemento del arreglo en una representación visual mediante el método `map()`. A continuación un ejemplo:
 
 ```tsx
 posts.map((post) => (
@@ -269,7 +281,7 @@ y podríamos mostrar un componente como el siguiente:
 
 ## 10. Manejo de errores
 
-Recordar que siempre que hacemos una petitición HTTP se debe añadir algún tipo de manejo de errores. Podemos añadir un estado para esto:
+Recordar que siempre que hacemos una petición HTTP se debe añadir algún tipo de manejo de errores. Podemos añadir un estado para esto:
 
 ```tsx
 const [error, setError] = useState("");
@@ -327,7 +339,7 @@ La aplicación debería permitir:
 
 ---
 # Ejercicio propuesto
-Genera una especie de Wiki de los personajes de la serie "The Rick and Morty" utilizando la información proporcionada en la API: https://rickandmortyapi.com/api/character
+Genera una especie de wiki de los personajes de la serie "The Rick and Morty" utilizando la información proporcionada en la API: https://rickandmortyapi.com/api/character
 
 ## Referencias
 
