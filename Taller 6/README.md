@@ -186,6 +186,8 @@ Levanta el servidor en modo desarrollo usando el siguiente comando:
 
 ```bash
 npm run dev
+
+Nota: Si no funciona el comando anterior (no reconoce el atributo --watch) puede deberse a la versión de Node que tienes instalada. Tendrás que utilizar el otro comando (npm start) para levantar el servidor.
 ```
 
 En la terminal debería aparecer el mensaje `Servidor ejecutándose en http://localhost:3000`. Abre esa dirección en el navegador para ver la respuesta de tu servidor. ¡Felicitaciones, levantaste tu primer servidor!
