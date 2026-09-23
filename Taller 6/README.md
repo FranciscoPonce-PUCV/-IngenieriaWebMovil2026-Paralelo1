@@ -91,6 +91,7 @@ Abre `package.json` y modifica la sección `scripts` para que quede de la siguie
 ***Nota:*** Esto lo hacemos para crear "comandos personalizados". En el caso del comando dev, sin la opción `--watch` tendríamos que detener el servidor (`Control + C`) y volver a levantarlo manualmente cada vez que modificamos el código. Con esta configuración, más adelante (cuando hayamos configurado nuestro servidor), podremos utilizar uno de los siguientes comandos para levantar nuestro servidor:
 
 ```text
+Explicación de los comandos que utilizaremos más adelante:
 npm start    → levanta el servidor.
 npm run dev  → levanta el servidor y lo reinicia automáticamente cada vez que guardamos un cambio.
 ```
